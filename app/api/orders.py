@@ -106,4 +106,3 @@ def get_order(order_id: int, db: Session = Depends(get_db)) -> Order:
     if order is None:  # если такого заказа нет возвращаем клиенту ошибку 404
         raise HTTPException(status_code=404, detail="Order not found")
     return order
-lk
